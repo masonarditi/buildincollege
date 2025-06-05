@@ -11,7 +11,7 @@ const items = [
       value: "$50",
       description: "",
       href: "https://www.anthropic.com/contact-sales/for-student-builders",
-      tags: ["Credits", "AI"]
+      tags: ["API Credits", "AI"]
     },
     {
       id: "2",
@@ -157,10 +157,15 @@ function Component() {
               <TableCell>
                 <div className="flex items-center gap-3">
                   <img
-                    className="rounded-md w-10 h-10 object-contain"
+                    className={cn(
+                      "rounded-md object-contain",
+                      (item.resource === "Claude Credits" || item.resource === "Free Cursor Pro (1 Year)") 
+                        ? "w-8 h-8" 
+                        : "w-10 h-10"
+                    )}
                     src={item.logo}
-                    width={40}
-                    height={40}
+                    width={item.resource === "Claude Credits" || item.resource === "Free Cursor Pro (1 Year)" ? 32 : 40}
+                    height={item.resource === "Claude Credits" || item.resource === "Free Cursor Pro (1 Year)" ? 32 : 40}
                     alt={`${item.resource} logo`}
                   />
                   <a 
@@ -201,6 +206,18 @@ function Component() {
           ))}
         </TableBody>
       </Table>
+      
+      <div className="mt-8 text-center">
+        <p className="text-sm text-muted-foreground mb-3">Have a resource to share? Submit it here</p>
+        <a
+          href="https://forms.gle/ZVn6A2hC6YQuPCxC8"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90"
+        >
+          Submit Resource
+        </a>
+      </div>
     </div>
   );
 }
