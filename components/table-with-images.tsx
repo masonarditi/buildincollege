@@ -1,6 +1,9 @@
+'use client';
+
 /* eslint-disable @next/next/no-img-element */
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 
 const items = [
@@ -119,7 +122,14 @@ TableBody.displayName = "TableBody";
 
 const TableRow = React.forwardRef<HTMLTableRowElement, React.HTMLAttributes<HTMLTableRowElement>>(
   ({ className, ...props }, ref) => (
-    <tr ref={ref} className={cn("border-b border-border transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted", className)} {...props} />
+    <motion.tr 
+      ref={ref} 
+      className={cn("border-b border-border transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted", className)}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+      {...props} 
+    />
   )
 );
 TableRow.displayName = "TableRow";
@@ -152,8 +162,17 @@ function Component() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {items.map((item) => (
-            <TableRow key={item.id}>
+          {items.map((item, index) => (
+            <motion.tr
+              key={item.id}
+              className="border-b border-border transition-colors hover:bg-muted/50"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ 
+                duration: 0.3,
+                delay: index * 0.1 
+              }}
+            >
               <TableCell>
                 <div className="flex items-center gap-3">
                   <img
@@ -202,7 +221,7 @@ function Component() {
                   Apply Now
                 </a>
               </TableCell>
-            </TableRow>
+            </motion.tr>
           ))}
         </TableBody>
       </Table>
