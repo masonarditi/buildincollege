@@ -122,12 +122,9 @@ TableBody.displayName = "TableBody";
 
 const TableRow = React.forwardRef<HTMLTableRowElement, React.HTMLAttributes<HTMLTableRowElement>>(
   ({ className, ...props }, ref) => (
-    <motion.tr 
+    <tr 
       ref={ref} 
       className={cn("border-b border-border transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted", className)}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
       {...props} 
     />
   )
@@ -153,13 +150,13 @@ function Component() {
     <div className="bg-background">
       <Table>
         <TableHeader>
-          <TableRow className="hover:bg-transparent">
+          <tr className="hover:bg-transparent">
             <TableHead>Resource</TableHead>
             <TableHead>Value</TableHead>
             <TableHead>Tags</TableHead>
             <TableHead>Description</TableHead>
             <TableHead></TableHead>
-          </TableRow>
+          </tr>
         </TableHeader>
         <TableBody>
           {items.map((item, index) => (
@@ -170,8 +167,11 @@ function Component() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ 
                 duration: 0.3,
-                delay: index * 0.1 
+                delay: index * 0.1,
+                type: "spring",
+                stiffness: 100
               }}
+              style={{ display: 'table-row' }}
             >
               <TableCell>
                 <div className="flex items-center gap-3">
