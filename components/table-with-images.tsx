@@ -131,6 +131,7 @@ function Component() {
             <TableHead>Value</TableHead>
             <TableHead>Tags</TableHead>
             <TableHead>Description</TableHead>
+            <TableHead></TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -139,7 +140,7 @@ function Component() {
               <TableCell>
                 <div className="flex items-center gap-3">
                   <img
-                    className="rounded-lg w-10 h-10 object-contain"
+                    className="rounded-md w-10 h-10 object-contain"
                     src={item.logo}
                     width={40}
                     height={40}
@@ -161,7 +162,7 @@ function Component() {
                   {item.tags.map((tag, index) => (
                     <span 
                       key={index}
-                      className="px-2 py-1 bg-muted rounded-full text-xs text-muted-foreground"
+                      className="px-2 py-1 bg-muted rounded-md text-xs text-muted-foreground"
                     >
                       {tag}
                     </span>
@@ -169,6 +170,16 @@ function Component() {
                 </div>
               </TableCell>
               <TableCell className="max-w-md">{item.description}</TableCell>
+              <TableCell className="whitespace-nowrap">
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-md px-4 py-1.5 text-xs font-medium bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 whitespace-nowrap"
+                >
+                  Apply Now
+                </a>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
