@@ -1,31 +1,96 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
+'use client';
+
+import { motion } from 'framer-motion';
+
 export default function AboutPage() {
+    const containerVariants = {
+      hidden: { opacity: 0 },
+      visible: {
+        opacity: 1,
+        transition: {
+          staggerChildren: 0.15
+        }
+      }
+    };
+
+    const itemVariants = {
+      hidden: { opacity: 0, y: 20 },
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.5,
+          ease: "easeOut"
+        }
+      }
+    };
+
+    const imageVariants = {
+      hidden: { opacity: 0, scale: 0.95 },
+      visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+          duration: 0.6,
+          ease: "easeOut"
+        }
+      }
+    };
+
     return (
       <div className="flex justify-center pt-16">
-        <div className="w-2/3 flex gap-8 p-8 rounded-lg border shadow-sm">
-          <div className="w-1/3">
+        <motion.div 
+          className="w-full md:w-2/3 flex flex-col md:flex-row gap-8 p-8 rounded-lg border shadow-sm"
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+        >
+          <motion.div 
+            className="w-full md:w-1/3"
+            variants={imageVariants}
+          >
             <img 
               src="/mason.jpeg"
               alt="Mason"
               className="rounded-lg w-full aspect-[3/4] object-cover"
             />
-          </div>
-          <div className="w-2/3">
+          </motion.div>
+          <div className="w-full md:w-2/3">
             <div className="text-md space-y-4.5">
-              <p className="font-medium">about the guy who made this</p>
-              <p>what's up, i'm mason. i'm 19 years old and a student at berkeley.</p>
+              <motion.p variants={itemVariants} className="font-medium">
+                about the guy who made this
+              </motion.p>
+              <motion.p variants={itemVariants}>
+                what's up, i'm mason. i'm 19 years old and a student at berkeley.
+              </motion.p>
               
-              <p>i learned to code during my first semester in college, and since then i've been building nonstop.</p>
+              <motion.p variants={itemVariants}>
+                i learned to code during my first semester in college, and since then i've been building nonstop.
+              </motion.p>
               
-              <p>some of my projects include a <a href="https://tinyurl.com/moffittstatuspmf" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">library tracking app</a> acquired by uc berkeley, a <a href="https://www.calrank.live/" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">club ranking website</a> that got 40k users in 3 hours (until someone deleted out db with a sql injection xD), and <a href="https://tinyurl.com/aibjglasses" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">blackjack meta glasses</a> that count cards for you. </p>
+              <motion.p variants={itemVariants}>
+                some of my projects include a <a href="https://tinyurl.com/moffittstatuspmf" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">library tracking app</a> acquired by uc berkeley, a <a href="https://www.calrank.live/" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">club ranking website</a> that got 40k users in 3 hours (until someone deleted out db with a sql injection xD), and <a href="https://tinyurl.com/aibjglasses" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">blackjack meta glasses</a> that count cards for you.
+              </motion.p>
 
-              <p>i also like to <a href="https://tinyurl.com/doublekfchina" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">skateboard</a></p>
+              <motion.p variants={itemVariants}>
+                i also like to <a href="https://tinyurl.com/doublekfchina" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">skateboard</a>
+              </motion.p>
               
-              <p>i started <span className="font-medium">Build in College</span> because i want to meet other students who are building cool stuff in college (or high school).</p>
+              <motion.p variants={itemVariants}>
+                i started <span className="font-medium">Build in College</span> because i want to meet other students who are building cool stuff in college (or high school).
+              </motion.p>
               
-              <p>so, if you have suggestions or just wanna chat, feel free to reach out!</p>
-              <div className="flex gap-4 mt-4">
+              <motion.p variants={itemVariants}>
+                so, if you have suggestions or just wanna chat, feel free to reach out!
+              </motion.p>
+
+              <motion.div 
+                className="flex gap-4 mt-4"
+                variants={itemVariants}
+                whileHover={{ scale: 1.05 }}
+              >
                 <a 
                   href="mailto:masonarditi@berkeley.edu"
                   target="_blank"
@@ -57,17 +122,10 @@ export default function AboutPage() {
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                   </svg>
                 </a>
-              </div>
-
-              </div>
+              </motion.div>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     );
   }
-
-
-
-
-
-  
