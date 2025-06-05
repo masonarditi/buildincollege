@@ -227,7 +227,7 @@ function Component() {
       </Table>
       
       <div className="mt-8 text-center">
-        <p className="text-sm text-muted-foreground mb-3">Have a resource to share? Submit it here</p>
+        <p className="text-sm text-muted-foreground mb-3">Have a resource to share?</p>
         <a
           href="https://forms.gle/ZVn6A2hC6YQuPCxC8"
           target="_blank"
