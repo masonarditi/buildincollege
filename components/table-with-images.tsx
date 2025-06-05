@@ -9,7 +9,7 @@ const items = [
       resource: "Claude Credits",
       logo: "/logos/anthropic-small.png",
       value: "$50",
-      description: "Offered via Claude Campus Ambassadors",
+      description: "",
       href: "https://www.anthropic.com/contact-sales/for-student-builders",
       tags: ["Credits", "AI"]
     },
@@ -20,63 +20,80 @@ const items = [
       value: "$1000",
       description: "Via Microsoft for Startups (Azure)",
       href: "https://www.microsoft.com/en-us/startups/ai",
-      tags: ["Credits", "AI"]
+      tags: ["API Credits", "AI"]
     },
     {
       id: "3",
+      resource: "Free Cursor Pro (1 Year)",
+      logo: "/logos/cursor.jpeg",
+      value: "$240",
+      description: "Sign up with .edu email",
+      href: "https://www.cursor.com/students",
+      tags: ["AI"]
+    },
+    {
+      id: "4",
+      resource: "Free Notion Plus w/ AI",
+      logo: "/logos/notion.png",
+      value: "Via Github Student Dev Pack",
+      description: "",
+      href: "https://education.github.com/pack",
+      tags: ["Productivity", "AI"]
+    },
+    {
+      id: "5",
+      resource: "Free Figma Pro",
+      logo: "/logos/figma.avif",
+      value: "$144/year",
+      description: "Sign up with .edu email",
+      href: "https://www.figma.com/education/",
+      tags: ["Design", "AI"]
+    },
+    {
+      id: "6",
+      resource: "Free Domains (Name.com)",
+      logo: "/logos/name.webp",
+      value: "",
+      description: ".live, .software, .studio, etc.",
+      href: "https://education.github.com/pack",
+      tags: ["Startups", "Web Infrastructure"]
+    },
+    {
+      id: "7",
+      resource: "Free Heroku Hosting (2 Years)",
+      logo: "/logos/heroku.webp",
+      value: "$312",
+      description: "2 years of hosting via Github Student Dev Pack",
+      href: "https://education.github.com/pack",
+      tags: ["Web Infrastructure", "Startups"]
+    },
+    {
+      id: "8",
+      resource: "Free Perplexity Pro (1 Month)",
+      logo: "/logos/perplexity.png",
+      value: "$20",
+      description: "Sign up with .edu email",
+      href: "https://www.perplexity.ai/referrals/join?login-source=oneTap&login-new=false",
+      tags: ["AI", "Productivity"]
+    },
+    {
+      id: "9",
       resource: "Microsoft for Startups",
       logo: "/logos/microsoft.webp",
       value: "",
       description: "",
       href: "https://www.microsoft.com/en-us/startups",
-      tags: ["Credits", "AI", "Startups", "Web Infrastructure"]
+      tags: ["API Credits", "AI", "Startups", "Web Infrastructure"]
     },
     {
-      id: "4",
+      id: "10",
       resource: "Github Student Developer Pack",
       logo: "/logos/github.png",
       value: "",
       description: "",
       href: "https://education.github.com/pack",
-      tags: ["Credits", "AI", "Startups", "Web Infrastructure"]
+      tags: ["API Credits", "AI", "Startups", "Web Infrastructure"]
     },
-  {
-    id: "5",
-    resource: "Free Notion Plus w/ AI",
-    logo: "/logos/notion.png",
-    value: "",
-    description: "",
-    href: "https://education.github.com/pack",
-    tags: ["Productivity", "AI"]
-  },
-  {
-    id: "6",
-    resource: "Free Domains (Name.com)",
-    logo: "/logos/name.webp",
-    value: "",
-    description: ".live, .software, .studio, etc.",
-    href: "https://education.github.com/pack",
-    tags: ["Startups", "Web Infrastructure"]
-  },
-
-  {
-    id: "7",
-    resource: "Free Heroku Hosting (2 Years)",
-    logo: "/logos/heroku.webp",
-    value: "$312",
-    description: "2 years of hosting via Github Student Dev Pack",
-    href: "https://education.github.com/pack",
-    tags: ["Web Infrastructure", "Startups"]
-  },
-  {
-    id: "8",
-    resource: "Free Cursor Pro (1 Year)",
-    logo: "/logos/cursor.jpeg",
-    value: "$240",
-    description: "Sign up with .edu email",
-    href: "https://www.cursor.com/students",
-    tags: ["AI"]
-  },
   ];
 
 const Table = React.forwardRef<HTMLTableElement, React.HTMLAttributes<HTMLTableElement>>(
