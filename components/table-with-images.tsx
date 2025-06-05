@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
@@ -5,45 +6,68 @@ import { cn } from "@/lib/utils";
 const items = [
     {
       id: "1",
-      program: "Claude Credits",
+      resource: "Claude Credits",
       logo: "/logos/anthropic-small.png",
-      amount: "$50",
+      value: "$50",
+      description: "Offered via Claude Campus Ambassadors",
       tags: ["Credits", "AI"]
     },
     {
       id: "2",
-      program: "OpenAI Credits",
+      resource: "OpenAI Credits",
       logo: "/logos/openai.webp",
-      amount: "$1000",
+      value: "$1000",
+      description: "Via Microsoft for Startups (Azure)",
       tags: ["Credits", "AI"]
     },
     {
       id: "3",
-      program: "Microsoft for Startups",
+      resource: "Microsoft for Startups",
       logo: "/logos/microsoft.webp",
-      amount: "",
-      tags: ["Credits", "AI", "Startups"]
+      value: "",
+      description: "",
+      tags: ["Credits", "AI", "Startups", "Web Infrastructure"]
     },
     {
       id: "4",
-      program: "Github Student Developer Pack",
+      resource: "Github Student Developer Pack",
       logo: "/logos/github.png",
-      amount: "",
-      tags: ["Credits", "AI", "Startups"]
+      value: "",
+      description: "",
+      tags: ["Credits", "AI", "Startups", "Web Infrastructure"]
     },
   {
     id: "5",
-    program: "Free Notion Plus w/ AI",
+    resource: "Free Notion Plus w/ AI",
     logo: "/logos/notion.png",
-    amount: "",
+    value: "",
+    description: "",
     tags: ["Productivity", "AI"]
   },
   {
     id: "6",
-    program: "Free Domains (Name.com)",
+    resource: "Free Domains (Name.com)",
     logo: "/logos/name.webp",
-    amount: "",
-    tags: ["Startups"]
+    value: "",
+    description: ".live, .software, .studio, etc.",
+    tags: ["Startups", "Web Infrastructure"]
+  },
+
+  {
+    id: "7",
+    resource: "Free Heroku Hosting (2 Years)",
+    logo: "/logos/heroku.webp",
+    value: "$312",
+    description: "2 years of hosting via Github Student Dev Pack",
+    tags: ["Web Infrastructure", "Startups"]
+  },
+  {
+    id: "8",
+    resource: "Free Cursor Pro (1 Year)",
+    logo: "/logos/cursor.jpeg",
+    value: "$240",
+    description: "Sign up with .edu email",
+    tags: ["AI"]
   },
   ];
 
@@ -95,9 +119,10 @@ function Component() {
       <Table>
         <TableHeader>
           <TableRow className="hover:bg-transparent">
-            <TableHead>Program</TableHead>
-            <TableHead>Amount</TableHead>
-            <TableHead>Focus</TableHead>
+            <TableHead>Resource</TableHead>
+            <TableHead>Value</TableHead>
+            <TableHead>Tags</TableHead>
+            <TableHead>Description</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -110,12 +135,12 @@ function Component() {
                     src={item.logo}
                     width={40}
                     height={40}
-                    alt={`${item.program} logo`}
+                    alt={`${item.resource} logo`}
                   />
-                  <div className="font-medium">{item.program}</div>
+                  <div className="font-medium">{item.resource}</div>
                 </div>
               </TableCell>
-              <TableCell>{item.amount}</TableCell>
+              <TableCell>{item.value}</TableCell>
               <TableCell>
                 <div className="flex gap-2 flex-wrap">
                   {item.tags.map((tag, index) => (
@@ -128,6 +153,7 @@ function Component() {
                   ))}
                 </div>
               </TableCell>
+              <TableCell className="max-w-md">{item.description}</TableCell>
             </TableRow>
           ))}
         </TableBody>
