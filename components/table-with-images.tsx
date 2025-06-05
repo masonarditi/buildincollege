@@ -10,6 +10,7 @@ const items = [
       logo: "/logos/anthropic-small.png",
       value: "$50",
       description: "Offered via Claude Campus Ambassadors",
+      href: "https://www.anthropic.com/contact-sales/for-student-builders",
       tags: ["Credits", "AI"]
     },
     {
@@ -18,6 +19,7 @@ const items = [
       logo: "/logos/openai.webp",
       value: "$1000",
       description: "Via Microsoft for Startups (Azure)",
+      href: "https://www.microsoft.com/en-us/startups/ai",
       tags: ["Credits", "AI"]
     },
     {
@@ -26,6 +28,7 @@ const items = [
       logo: "/logos/microsoft.webp",
       value: "",
       description: "",
+      href: "https://www.microsoft.com/en-us/startups",
       tags: ["Credits", "AI", "Startups", "Web Infrastructure"]
     },
     {
@@ -34,6 +37,7 @@ const items = [
       logo: "/logos/github.png",
       value: "",
       description: "",
+      href: "https://education.github.com/pack",
       tags: ["Credits", "AI", "Startups", "Web Infrastructure"]
     },
   {
@@ -42,6 +46,7 @@ const items = [
     logo: "/logos/notion.png",
     value: "",
     description: "",
+    href: "https://education.github.com/pack",
     tags: ["Productivity", "AI"]
   },
   {
@@ -50,6 +55,7 @@ const items = [
     logo: "/logos/name.webp",
     value: "",
     description: ".live, .software, .studio, etc.",
+    href: "https://education.github.com/pack",
     tags: ["Startups", "Web Infrastructure"]
   },
 
@@ -59,6 +65,7 @@ const items = [
     logo: "/logos/heroku.webp",
     value: "$312",
     description: "2 years of hosting via Github Student Dev Pack",
+    href: "https://education.github.com/pack",
     tags: ["Web Infrastructure", "Startups"]
   },
   {
@@ -67,6 +74,7 @@ const items = [
     logo: "/logos/cursor.jpeg",
     value: "$240",
     description: "Sign up with .edu email",
+    href: "https://www.cursor.com/students",
     tags: ["AI"]
   },
   ];
@@ -137,7 +145,14 @@ function Component() {
                     height={40}
                     alt={`${item.resource} logo`}
                   />
-                  <div className="font-medium">{item.resource}</div>
+                  <a 
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium hover:underline"
+                  >
+                    {item.resource}
+                  </a>
                 </div>
               </TableCell>
               <TableCell>{item.value}</TableCell>
