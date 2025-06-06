@@ -76,7 +76,7 @@ const items = [
       logo: "/logos/perplexity.png",
       value: "$20",
       description: "Sign up with .edu email",
-      href: "https://www.perplexity.ai/referrals/join?login-source=oneTap&login-new=false",
+      href: "https://plex.it/referrals/BNJ8UCZW",
       tags: ["AI", "Productivity"]
     },
     {
