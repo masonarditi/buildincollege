@@ -38,8 +38,8 @@ const items = [
       id: "4",
       resource: "Free Notion Plus w/ AI",
       logo: "/logos/notion.png",
-      value: "Via Github Student Dev Pack",
-      description: "",
+      value: "",
+      description: "Via Github Student Dev Pack",
       href: "https://education.github.com/pack",
       tags: ["Productivity", "AI"]
     },
