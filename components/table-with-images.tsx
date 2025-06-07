@@ -97,6 +97,15 @@ const items = [
       href: "https://education.github.com/pack",
       tags: ["API Credits", "AI", "Startups", "Web Infrastructure"]
     },
+    {
+      id: "11",
+      resource: "Free GPU Credits",
+      logo: "/logos/digitalocean.png",
+      value: "$10,000",
+      description: "Sign up via Hatch program",
+      href: "https://sammydigitalocean.typeform.com/to/tZXAmt?typeform-source=www.digitalocean.com",
+      tags: ["GPU", "Web Infrastructure", "AI", "Startups "]
+    },
   ];
 
 const Table = React.forwardRef<HTMLTableElement, React.HTMLAttributes<HTMLTableElement>>(
