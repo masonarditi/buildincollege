@@ -1,12 +1,13 @@
 'use client';
 
-import { Component as ResourceTable } from "@/components/table-with-images";
-import { FellowshipsTable } from "@/components/fellowships-table";
+import { UnifiedTable } from "@/components/unified-table";
+import { freeStuffData } from "@/data/free-stuff";
+import { fellowshipsData } from "@/data/fellowships";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState<'credits' | 'fellowships' | 'all'>('credits');
+  const [activeTab, setActiveTab] = useState<'credits' | 'fellowships' | 'all'>('all');
 
   return (
     <div className="p-8 max-w-6xl mx-auto">
@@ -27,6 +28,16 @@ export default function Home() {
       >
         <div className="flex gap-2 p-1 bg-muted rounded-lg w-fit">
           <button
+            onClick={() => setActiveTab('all')}
+            className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+              activeTab === 'all' 
+                ? 'bg-background text-foreground shadow-sm' 
+                : 'text-muted-foreground hover:text-foreground'
+            }`}
+          >
+            All
+          </button>
+          <button
             onClick={() => setActiveTab('credits')}
             className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
               activeTab === 'credits' 
@@ -46,16 +57,6 @@ export default function Home() {
           >
             Fellowships
           </button>
-          <button
-            onClick={() => setActiveTab('all')}
-            className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
-              activeTab === 'all' 
-                ? 'bg-background text-foreground shadow-sm' 
-                : 'text-muted-foreground hover:text-foreground'
-            }`}
-          >
-            All
-          </button>
         </div>
       </motion.div>
       
@@ -65,19 +66,14 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        {activeTab === 'credits' && <ResourceTable />}
-        {activeTab === 'fellowships' && <FellowshipsTable />}
+        {activeTab === 'credits' && (
+          <UnifiedTable data={freeStuffData} category="free-stuff" />
+        )}
+        {activeTab === 'fellowships' && (
+          <UnifiedTable data={fellowshipsData} category="fellowships" />
+        )}
         {activeTab === 'all' && (
-          <div className="space-y-12">
-            <div>
-              <h2 className="text-xl font-semibold mb-6">Free Stuff</h2>
-              <ResourceTable />
-            </div>
-            <div>
-              <h2 className="text-xl font-semibold mb-6">Fellowships</h2>
-              <FellowshipsTable />
-            </div>
-          </div>
+          <UnifiedTable data={[...fellowshipsData, ...freeStuffData]} category="all" />
         )}
       </motion.div>
     </div>

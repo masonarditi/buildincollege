@@ -5,35 +5,21 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
-const fellowships = [
-  {
-    id: "1",
-    resource: "Z Fellows",
-    logo: "/logos/zfellows.jpeg",
-    value: "$10,000",
-    description: "$10k grant & fellowship for young entrepreneurs",
-    href: "https://www.zfellows.com/",
-    tags: ["Fellowship", "Grant", "Mentorship"]
-  },
-  {
-    id: "2",
-    resource: "Neo Scholarship",
-    logo: "/logos/neo.svg", 
-    value: "$25,000",
-    description: "Fellowship & grant for CS students",
-    href: "https://neo.com/scholars",
-    tags: ["Fellowship", "Grant", "Mentorship"]
-  },
-  {
-    id: "3",
-    resource: "Afore Capital Grants",
-    logo: "/logos/afore.jpeg",
-    value: "$1,000",
-    description: "$1,000 non-dilutive grant",
-    href: "https://grants.afore.vc/",
-    tags: ["Fellowship", "Grant", "Mentorship"]
-  }
-];
+export interface TableItem {
+  id: string;
+  resource: string;
+  logo: string;
+  value: string;
+  description: string;
+  href: string;
+  tags: string[];
+  category: string;
+}
+
+interface UnifiedTableProps {
+  data: TableItem[];
+  category?: string;
+}
 
 const Table = React.forwardRef<HTMLTableElement, React.HTMLAttributes<HTMLTableElement>>(
   ({ className, ...props }, ref) => (
@@ -70,7 +56,17 @@ const TableCell = React.forwardRef<HTMLTableCellElement, React.TdHTMLAttributes<
 );
 TableCell.displayName = "TableCell";
 
-function FellowshipsTable() {
+function UnifiedTable({ data, category }: UnifiedTableProps) {
+  const getButtonText = (itemCategory: string) => {
+    return itemCategory === 'fellowships' ? 'Apply Now' : 'Apply Now';
+  };
+
+  const footer = {
+    text: "Have a resource to share?",
+    buttonText: "Submit Resource", 
+    href: "https://forms.gle/ZVn6A2hC6YQuPCxC8"
+  };
+
   return (
     <div className="bg-background">
       <Table>
@@ -84,9 +80,9 @@ function FellowshipsTable() {
           </tr>
         </TableHeader>
         <TableBody>
-          {fellowships.map((fellowship, index) => (
+          {data.map((item, index) => (
             <motion.tr
-              key={fellowship.id}
+              key={item.id}
               className="border-b border-border transition-colors hover:bg-muted/50"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -101,28 +97,33 @@ function FellowshipsTable() {
               <TableCell>
                 <div className="flex items-center gap-3">
                   <img
-                    className="w-10 h-10 rounded-md object-contain"
-                    src={fellowship.logo}
-                    width={40}
-                    height={40}
-                    alt={`${fellowship.resource} logo`}
+                    className={cn(
+                      "rounded-md object-contain",
+                      (item.resource === "Claude Credits" || item.resource === "Free Cursor Pro (1 Year)") 
+                        ? "w-8 h-8" 
+                        : "w-10 h-10"
+                    )}
+                    src={item.logo}
+                    width={item.resource === "Claude Credits" || item.resource === "Free Cursor Pro (1 Year)" ? 32 : 40}
+                    height={item.resource === "Claude Credits" || item.resource === "Free Cursor Pro (1 Year)" ? 32 : 40}
+                    alt={`${item.resource} logo`}
                   />
                   <a 
-                    href={fellowship.href}
+                    href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-medium hover:underline"
                   >
-                    {fellowship.resource}
+                    {item.resource}
                   </a>
                 </div>
               </TableCell>
-              <TableCell>{fellowship.value}</TableCell>
+              <TableCell>{item.value}</TableCell>
               <TableCell>
                 <div className="flex gap-2 flex-wrap">
-                  {fellowship.tags.map((tag, index) => (
+                  {item.tags.map((tag, tagIndex) => (
                     <span 
-                      key={index}
+                      key={tagIndex}
                       className="px-2 py-1 bg-muted rounded-md text-xs text-muted-foreground"
                     >
                       {tag}
@@ -130,15 +131,15 @@ function FellowshipsTable() {
                   ))}
                 </div>
               </TableCell>
-              <TableCell className="max-w-md">{fellowship.description}</TableCell>
+              <TableCell className="max-w-md">{item.description}</TableCell>
               <TableCell className="whitespace-nowrap">
                 <a
-                  href={fellowship.href}
+                  href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-md px-4 py-1.5 text-xs font-medium bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 whitespace-nowrap"
                 >
-                  Apply Now
+                  {getButtonText(item.category)}
                 </a>
               </TableCell>
             </motion.tr>
@@ -146,19 +147,21 @@ function FellowshipsTable() {
         </TableBody>
       </Table>
       
-      <div className="mt-8 text-center">
-        <p className="text-sm text-muted-foreground mb-3">Know of a fellowship that should be listed?</p>
-        <a
-          href="https://forms.gle/ZVn6A2hC6YQuPCxC8"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90"
-        >
-          Submit Fellowship
-        </a>
-      </div>
+      {category && (
+        <div className="mt-8 text-center">
+          <p className="text-sm text-muted-foreground mb-3">{footer.text}</p>
+          <a
+            href={footer.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90"
+          >
+            {footer.buttonText}
+          </a>
+        </div>
+      )}
     </div>
   );
 }
 
-export { FellowshipsTable };
+export { UnifiedTable }; 
