@@ -31,6 +31,16 @@ export const freeStuffData = [
   },
   {
     id: "4",
+    resource: "Google Veo 3 AI Video Generator",
+    logo: "/logos/google.jpeg",
+    value: "$240/year",
+    description: "Free via Google AI Pro for students through finals 2026",
+    href: "https://one.google.com/about/google-ai-plans/",
+    tags: ["AI", "Video Generation", "Productivity"],
+    category: "free-stuff"
+  },
+  {
+    id: "5",
     resource: "Free Notion Plus w/ AI",
     logo: "/logos/notion.png",
     value: "",
@@ -40,7 +50,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "5",
+    id: "6",
     resource: "Free Figma Pro",
     logo: "/logos/figma.avif",
     value: "$144/year",
@@ -50,7 +60,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "6",
+    id: "7",
     resource: "Free Domains (Name.com)",
     logo: "/logos/name.webp",
     value: "",
@@ -60,7 +70,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "7",
+    id: "8",
     resource: "Free Heroku Hosting (2 Years)",
     logo: "/logos/heroku.webp",
     value: "$312",
@@ -70,7 +80,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "8",
+    id: "9",
     resource: "Free Perplexity Pro (1 Month)",
     logo: "/logos/perplexity.png",
     value: "$20",
@@ -80,7 +90,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "9",
+    id: "10",
     resource: "Microsoft for Startups",
     logo: "/logos/microsoft.webp",
     value: "",
@@ -90,7 +100,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "10",
+    id: "11",
     resource: "Github Student Developer Pack",
     logo: "/logos/github.png",
     value: "",
@@ -100,7 +110,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "11",
+    id: "12",
     resource: "Free GPU Credits",
     logo: "/logos/digitalocean.png",
     value: "$10,000",

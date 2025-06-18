@@ -73,7 +73,7 @@ export default function Home() {
           <UnifiedTable data={fellowshipsData} category="fellowships" />
         )}
         {activeTab === 'all' && (
-          <UnifiedTable data={[...fellowshipsData, ...freeStuffData]} category="all" />
+          <UnifiedTable data={[...freeStuffData, ...fellowshipsData]} category="all" />
         )}
       </motion.div>
     </div>
