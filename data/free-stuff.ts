@@ -41,6 +41,16 @@ export const freeStuffData = [
   },
   {
     id: "5",
+    resource: "Screen Studio",
+    logo: "/logos/screenstudio.jpeg",
+    value: "$100+",
+    description: "40% off with student email",
+    href: "https://screen.studio/license/request-educational-discount",
+    tags: ["Productivity", "Video Creation"],
+    category: "free-stuff"
+  },
+  {
+    id: "6",
     resource: "Free Notion Plus w/ AI",
     logo: "/logos/notion.png",
     value: "",
@@ -50,7 +60,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "6",
+    id: "7",
     resource: "Free Figma Pro",
     logo: "/logos/figma.avif",
     value: "$144/year",
@@ -60,7 +70,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "7",
+    id: "8",
     resource: "Free Domains (Name.com)",
     logo: "/logos/name.webp",
     value: "",
@@ -70,7 +80,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "8",
+    id: "9",
     resource: "Free Heroku Hosting (2 Years)",
     logo: "/logos/heroku.webp",
     value: "$312",
@@ -80,7 +90,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "9",
+    id: "10",
     resource: "Free Perplexity Pro (1 Month)",
     logo: "/logos/perplexity.png",
     value: "$20",
@@ -90,7 +100,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "10",
+    id: "11",
     resource: "Microsoft for Startups",
     logo: "/logos/microsoft.webp",
     value: "",
@@ -100,7 +110,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "11",
+    id: "12",
     resource: "Github Student Developer Pack",
     logo: "/logos/github.png",
     value: "",
@@ -110,7 +120,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "12",
+    id: "13",
     resource: "Free GPU Credits",
     logo: "/logos/digitalocean.png",
     value: "$10,000",
