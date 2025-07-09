@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { MoveRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ReviewComponent } from "@/components/ui/review-component";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -29,6 +30,8 @@ export default function Home() {
     <div className="w-full">
       <div className="container mx-auto">
         <div className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col">
+          <ReviewComponent count={600} />
+          
           <div className="flex gap-4 flex-col">
             <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
               <span className="text-spektr-cyan-50">Free stuff for college</span>
@@ -62,6 +65,7 @@ export default function Home() {
               Curated free tools, software credits, and fellowships for college builders. Everything you need to build without breaking the bank.
             </p>
           </div>
+          
           <div>
             <Button 
               size="lg" 
