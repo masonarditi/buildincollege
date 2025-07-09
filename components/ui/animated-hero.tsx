@@ -1,16 +1,12 @@
-'use client';
-
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { MoveRight, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
 
-export default function Home() {
-  const router = useRouter();
+function Hero() {
   const [titleNumber, setTitleNumber] = useState(0);
   const titles = useMemo(
-    () => ["builders", "hackers", "founders", "creators", "developers"],
+    () => ["amazing", "new", "wonderful", "beautiful", "smart"],
     []
   );
 
@@ -36,7 +32,7 @@ export default function Home() {
           </div>
           <div className="flex gap-4 flex-col">
             <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
-              <span className="text-spektr-cyan-50">Free stuff for college</span>
+              <span className="text-spektr-cyan-50">This is something</span>
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
                 &nbsp;
                 {titles.map((title, index) => (
@@ -64,19 +60,18 @@ export default function Home() {
             </h1>
 
             <p className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center">
-              Curated free tools, software credits, and fellowships for college builders. Everything you need to build without breaking the bank.
+              Managing a small business today is already tough. Avoid further
+              complications by ditching outdated, tedious trade methods. Our
+              goal is to streamline SMB trade, making it easier and faster than
+              ever.
             </p>
           </div>
           <div className="flex flex-row gap-3">
             <Button size="lg" className="gap-4" variant="outline">
               Jump on a call <PhoneCall className="w-4 h-4" />
             </Button>
-            <Button 
-              size="lg" 
-              className="gap-4"
-              onClick={() => router.push('/dashboard')}
-            >
-              View Dashboard <MoveRight className="w-4 h-4" />
+            <Button size="lg" className="gap-4">
+              Sign up here <MoveRight className="w-4 h-4" />
             </Button>
           </div>
         </div>
@@ -84,3 +79,5 @@ export default function Home() {
     </div>
   );
 }
+
+export { Hero };
