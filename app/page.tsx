@@ -27,14 +27,59 @@ export default function Home() {
     return () => clearTimeout(timeoutId);
   }, [titleNumber, titles]);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6
+      }
+    }
+  };
+
+  const buttonVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
     <div className="w-full">
       <div className="container mx-auto">
-        <div className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col">
-          <ReviewComponent count={600} />
+        <motion.div 
+          className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col"
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+        >
+          <motion.div variants={itemVariants}>
+            <ReviewComponent count={600} />
+          </motion.div>
           
-          <div className="flex gap-4 flex-col">
-            <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
+          <motion.div className="flex gap-4 flex-col" variants={itemVariants}>
+            <motion.h1 
+              className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
               <span className="text-spektr-cyan-50">Free stuff for college</span>
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
                 &nbsp;
@@ -60,25 +105,37 @@ export default function Home() {
                   </motion.span>
                 ))}
               </span>
-            </h1>
+            </motion.h1>
 
-            <p className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center">
+            <motion.p 
+              className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
               Curated free tools, software credits, and fellowships for college builders. Everything you need to build without breaking the bank.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
           
-          <div>
+          <motion.div variants={buttonVariants}>
             <Button 
               size="lg" 
-              className="gap-4"
+              className="gap-4 hover:scale-105 transition-transform"
               onClick={() => router.push('/dashboard')}
             >
               View Dashboard <MoveRight className="w-4 h-4" />
             </Button>
-          </div>
+          </motion.div>
           
-          <Testimonials />
-        </div>
+          <motion.div 
+            variants={itemVariants}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+          >
+            <Testimonials />
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );
