@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { MoveRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ReviewComponent } from "@/components/ui/review-component";
+import { Testimonials } from "@/components/ui/testimonials";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -65,6 +66,8 @@ export default function Home() {
               Curated free tools, software credits, and fellowships for college builders. Everything you need to build without breaking the bank.
             </p>
           </div>
+          
+          <Testimonials />
           
           <div>
             <Button 
