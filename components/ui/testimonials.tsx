@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 interface TestimonialData {
@@ -8,7 +9,7 @@ interface TestimonialData {
 
 const testimonials: TestimonialData[] = [
   {
-    testimony: "Yo this website is super helpful",
+    testimony: "this website is super helpful",
     username: "JShankarpure",
     avatar: "https://pbs.twimg.com/profile_images/1824509052946092032/EnePry3o_400x400.jpg"
   },

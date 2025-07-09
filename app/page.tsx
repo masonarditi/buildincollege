@@ -67,8 +67,6 @@ export default function Home() {
             </p>
           </div>
           
-          <Testimonials />
-          
           <div>
             <Button 
               size="lg" 
@@ -78,6 +76,8 @@ export default function Home() {
               View Dashboard <MoveRight className="w-4 h-4" />
             </Button>
           </div>
+          
+          <Testimonials />
         </div>
       </div>
     </div>
