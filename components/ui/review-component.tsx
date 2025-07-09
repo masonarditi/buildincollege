@@ -14,24 +14,24 @@ const ReviewComponent = ({
   count = 200,
   avatars = [
     {
-      src: "https://www.shadcnblocks.com/images/block/avatar-1.webp",
-      alt: "Avatar 1",
+      src: "https://pbs.twimg.com/profile_images/1824509052946092032/EnePry3o_400x400.jpg",
+      alt: "JShankarpure",
     },
     {
-      src: "https://www.shadcnblocks.com/images/block/avatar-2.webp",
-      alt: "Avatar 2",
+      src: "https://pbs.twimg.com/profile_images/1925215793047887872/sjMmTLNt_400x400.jpg",
+      alt: "krayondev",
     },
     {
-      src: "https://www.shadcnblocks.com/images/block/avatar-3.webp",
-      alt: "Avatar 3",
+      src: "https://pbs.twimg.com/profile_images/1904319753537122304/9QjLNJ1W_400x400.jpg",
+      alt: "shivambuilds",
     },
     {
-      src: "https://www.shadcnblocks.com/images/block/avatar-4.webp",
-      alt: "Avatar 4",
+      src: "https://pbs.twimg.com/profile_images/1911892145515991040/x7st7XBY_400x400.jpg",
+      alt: "User 4",
     },
     {
-      src: "https://www.shadcnblocks.com/images/block/avatar-5.webp",
-      alt: "Avatar 5",
+      src: "https://pbs.twimg.com/profile_images/1874056278684692480/wHMRHz7v_400x400.jpg",
+      alt: "User 5",
     },
   ],
 }: ReviewComponentProps) => {
@@ -54,7 +54,7 @@ const ReviewComponent = ({
           ))}
         </div>
         <p className="text-left font-medium text-muted-foreground">
-          Used by {count}+ builders
+          Trusted by {count}+ college builders
         </p>
       </div>
     </div>
