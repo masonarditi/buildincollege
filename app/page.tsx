@@ -70,7 +70,7 @@ export default function Home() {
           variants={containerVariants}
         >
           <motion.div variants={itemVariants}>
-            <ReviewComponent count={600} />
+            <ReviewComponent count={2700} />
           </motion.div>
           
           <motion.div className="flex gap-4 flex-col" variants={itemVariants}>
