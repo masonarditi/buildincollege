@@ -1,6 +1,17 @@
 export const freeStuffData = [
   {
     id: "1",
+    resource: "Free Framer Pro",
+    logo: "/logos/framer.svg",
+    value: "$180",
+    description: "Framer is free for students! Just use your school email",
+    href: "https://www.framer.com/students/?dub_id=mXpTb4ulA4qL1oH1#signup",
+    tags: ["Design", "Web Development", "Productivity"],
+    category: "free-stuff",
+    isNew: true
+  },
+  {
+    id: "2",
     resource: "Claude Credits",
     logo: "/logos/anthropic-small.png",
     value: "$50",
@@ -10,7 +21,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "2",
+    id: "3",
     resource: "OpenAI Credits",
     logo: "/logos/openai.webp",
     value: "$1000",
@@ -20,7 +31,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "3",
+    id: "4",
     resource: "Free Cursor Pro (1 Year)",
     logo: "/logos/cursor.jpeg",
     value: "$240",
@@ -30,7 +41,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "4",
+    id: "5",
     resource: "Google Veo 3 AI Video Generator",
     logo: "/logos/google.jpeg",
     value: "$240/year",
@@ -40,7 +51,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "5",
+    id: "6",
     resource: "Screen Studio",
     logo: "/logos/screenstudio.jpeg",
     value: "$100+",
@@ -50,7 +61,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "6",
+    id: "7",
     resource: "Free Notion Plus w/ AI",
     logo: "/logos/notion.png",
     value: "",
@@ -60,7 +71,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "7",
+    id: "8",
     resource: "Free Figma Pro",
     logo: "/logos/figma.avif",
     value: "$144/year",
@@ -70,7 +81,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "8",
+    id: "9",
     resource: "Free Domains (Name.com)",
     logo: "/logos/name.webp",
     value: "",
@@ -80,7 +91,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "9",
+    id: "10",
     resource: "Free Domain (Namecheap)",
     logo: "/logos/namecheap.svg",
     value: "",
@@ -91,7 +102,7 @@ export const freeStuffData = [
     isNew: true
   },
   {
-    id: "10",
+    id: "11",
     resource: "Free Heroku Hosting (2 Years)",
     logo: "/logos/heroku.webp",
     value: "$312",
@@ -101,7 +112,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "11",
+    id: "12",
     resource: "Free Perplexity Pro (1 Month)",
     logo: "/logos/perplexity.png",
     value: "$20",
@@ -111,7 +122,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "12",
+    id: "13",
     resource: "Microsoft for Startups",
     logo: "/logos/microsoft.webp",
     value: "",
@@ -121,7 +132,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "13",
+    id: "14",
     resource: "Github Student Developer Pack",
     logo: "/logos/github.png",
     value: "",
@@ -131,7 +142,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "14",
+    id: "15",
     resource: "Free GPU Credits",
     logo: "/logos/digitalocean.png",
     value: "$10,000",
@@ -141,7 +152,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "15",
+    id: "16",
     resource: "Amazon AWS Credits",
     logo: "/logos/amazon-aws.png",
     value: "$10k+",
@@ -150,17 +161,5 @@ export const freeStuffData = [
     tags: ["API Credits", "Web Infrastructure", "Startups"],
     category: "free-stuff",
     isNew: true
-  },
-  {
-    id: "16",
-    resource: "Free Framer Pro",
-    logo: "/logos/framer.svg",
-    value: "$180",
-    description: "Framer is free for students! Just use your school email",
-    href: "https://www.framer.com/students/?dub_id=mXpTb4ulA4qL1oH1#signup",
-    tags: ["Design", "Web Development", "Productivity"],
-    category: "free-stuff",
-    isNew: true
-  },
-
+  }
 ]; 
