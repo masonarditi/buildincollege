@@ -138,5 +138,15 @@ export const freeStuffData = [
     href: "https://aws.amazon.com/free/offers/",
     tags: ["API Credits", "Web Infrastructure", "Startups"],
     category: "free-stuff"
+  },
+  {
+    id: "15",
+    resource: "Framer Pro",
+    logo: "/logos/framer.svg",
+    value: "$180",
+    description: "Framer is free for students! Just use your school email",
+    href: "https://www.framer.com/students/?dub_id=mXpTb4ulA4qL1oH1#signup",
+    tags: ["Design", "Web Development", "Productivity"],
+    category: "free-stuff"
   }
 ]; 
