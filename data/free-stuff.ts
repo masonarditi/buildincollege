@@ -81,6 +81,16 @@ export const freeStuffData = [
   },
   {
     id: "9",
+    resource: "Free Domain (Namecheap)",
+    logo: "/logos/namecheap.svg",
+    value: "",
+    description: ".me only, free with Github Student Dev Pack",
+    href: "https://nc.me/landing/github",
+    tags: ["Web Infrastructure", "Startups"],
+    category: "free-stuff"
+  },
+  {
+    id: "10",
     resource: "Free Heroku Hosting (2 Years)",
     logo: "/logos/heroku.webp",
     value: "$312",
@@ -90,7 +100,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "10",
+    id: "11",
     resource: "Free Perplexity Pro (1 Month)",
     logo: "/logos/perplexity.png",
     value: "$20",
@@ -100,7 +110,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "11",
+    id: "12",
     resource: "Microsoft for Startups",
     logo: "/logos/microsoft.webp",
     value: "",
@@ -110,7 +120,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "12",
+    id: "13",
     resource: "Github Student Developer Pack",
     logo: "/logos/github.png",
     value: "",
@@ -120,7 +130,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "13",
+    id: "14",
     resource: "Free GPU Credits",
     logo: "/logos/digitalocean.png",
     value: "$10,000",
@@ -130,7 +140,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "14",
+    id: "15",
     resource: "Amazon AWS Credits",
     logo: "/logos/amazon-aws.png",
     value: "$10k+",
@@ -140,13 +150,14 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "15",
-    resource: "Framer Pro",
+    id: "16",
+    resource: "Free Framer Pro",
     logo: "/logos/framer.svg",
     value: "$180",
     description: "Framer is free for students! Just use your school email",
     href: "https://www.framer.com/students/?dub_id=mXpTb4ulA4qL1oH1#signup",
     tags: ["Design", "Web Development", "Productivity"],
     category: "free-stuff"
-  }
+  },
+
 ]; 
