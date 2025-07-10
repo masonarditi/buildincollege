@@ -87,7 +87,8 @@ export const freeStuffData = [
     description: ".me only, free with Github Student Dev Pack",
     href: "https://nc.me/landing/github",
     tags: ["Web Infrastructure", "Startups"],
-    category: "free-stuff"
+    category: "free-stuff",
+    isNew: true
   },
   {
     id: "10",
@@ -147,7 +148,8 @@ export const freeStuffData = [
     description: "$300 without a website, up to $100k if you have a website. Say you're 'self-funded'",
     href: "https://aws.amazon.com/free/offers/",
     tags: ["API Credits", "Web Infrastructure", "Startups"],
-    category: "free-stuff"
+    category: "free-stuff",
+    isNew: true
   },
   {
     id: "16",
@@ -157,7 +159,8 @@ export const freeStuffData = [
     description: "Framer is free for students! Just use your school email",
     href: "https://www.framer.com/students/?dub_id=mXpTb4ulA4qL1oH1#signup",
     tags: ["Design", "Web Development", "Productivity"],
-    category: "free-stuff"
+    category: "free-stuff",
+    isNew: true
   },
 
 ]; 

@@ -14,6 +14,7 @@ export interface TableItem {
   href: string;
   tags: string[];
   category: string;
+  isNew?: boolean;
 }
 
 interface UnifiedTableProps {
@@ -121,6 +122,11 @@ function UnifiedTable({ data, category }: UnifiedTableProps) {
               <TableCell>{item.value}</TableCell>
               <TableCell>
                 <div className="flex gap-2 flex-wrap">
+                  {item.isNew && (
+                    <span className="px-2 py-1 bg-yellow-200 text-yellow-800 rounded-md text-xs">
+                      NEW
+                    </span>
+                  )}
                   {item.tags.map((tag, tagIndex) => (
                     <span 
                       key={tagIndex}

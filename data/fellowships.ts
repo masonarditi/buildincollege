@@ -37,6 +37,7 @@ export const fellowshipsData = [
     description: "grants for building crypto apps (dApps)",
     href: "https://earn.superteam.fun/grants",
     tags: ["Fellowship", "Grant", "Crypto", "Web3"],
-    category: "fellowships"
+    category: "fellowships",
+    isNew: true
   }
 ]; 
