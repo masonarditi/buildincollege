@@ -128,5 +128,15 @@ export const freeStuffData = [
     href: "https://sammydigitalocean.typeform.com/to/tZXAmt?typeform-source=www.digitalocean.com",
     tags: ["GPU", "Web Infrastructure", "AI", "Startups"],
     category: "free-stuff"
+  },
+  {
+    id: "14",
+    resource: "Amazon AWS Credits",
+    logo: "/logos/amazon-aws.png",
+    value: "$10k+",
+    description: "$300 without a website, up to $100k if you have a website. Say you're 'self-funded'",
+    href: "https://aws.amazon.com/free/offers/",
+    tags: ["API Credits", "Web Infrastructure", "Startups"],
+    category: "free-stuff"
   }
 ]; 
