@@ -28,5 +28,15 @@ export const fellowshipsData = [
     href: "https://grants.afore.vc/",
     tags: ["Fellowship", "Grant", "Mentorship"],
     category: "fellowships"
+  },
+  {
+    id: "f4",
+    resource: "Superteam Crypto Grants",
+    logo: "/logos/superteam.jpg",
+    value: "up to $10k",
+    description: "grants for building crypto apps (dApps)",
+    href: "https://earn.superteam.fun/grants",
+    tags: ["Fellowship", "Grant", "Crypto", "Web3"],
+    category: "fellowships"
   }
 ]; 
