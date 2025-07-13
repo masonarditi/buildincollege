@@ -4,6 +4,7 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { track } from "@vercel/analytics";
 
 export interface TableItem {
   id: string;
@@ -62,6 +63,17 @@ function UnifiedTable({ data, category }: UnifiedTableProps) {
     return itemCategory === 'fellowships' ? 'Apply Now' : 'Apply Now';
   };
 
+  const handleResourceClick = (item: TableItem, clickType: 'name' | 'button') => {
+    track('resource_click', {
+      resource_id: item.id,
+      resource_name: item.resource,
+      category: item.category,
+      value: item.value,
+      tags: item.tags.join(','),
+      click_type: clickType,
+    });
+  };
+
   const footer = {
     text: "Have a resource to share?",
     buttonText: "Submit Resource", 
@@ -114,6 +126,7 @@ function UnifiedTable({ data, category }: UnifiedTableProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-medium hover:underline"
+                    onClick={() => handleResourceClick(item, 'name')}
                   >
                     {item.resource}
                   </a>
@@ -144,6 +157,7 @@ function UnifiedTable({ data, category }: UnifiedTableProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-md px-4 py-1.5 text-xs font-medium bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 whitespace-nowrap"
+                  onClick={() => handleResourceClick(item, 'button')}
                 >
                   {getButtonText(item.category)}
                 </a>
