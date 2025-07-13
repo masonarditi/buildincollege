@@ -67,7 +67,7 @@ export const freeStuffData = [
     logo: "/logos/screenstudio.jpeg",
     value: "$100+",
     description: "40% off with student email",
-    href: "https://screen.studio/license/request-educational-discount",
+    href: "https://screen.studio/license/request-educational-discount?aff=9mm0pn",
     tags: ["Productivity", "Video Creation"],
     category: "free-stuff"
   },
