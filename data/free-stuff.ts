@@ -172,5 +172,16 @@ export const freeStuffData = [
     tags: ["API Credits", "Web Infrastructure", "Startups"],
     category: "free-stuff",
     isNew: true
+  },
+  {
+    id: "18",
+    resource: "ElevenLabs",
+    logo: "/logos/elevenlabs.png",
+    value: "$55",
+    description: "3 months free with Github Student Dev Pack",
+    href: "https://www.aiengineerpack.com/",
+    tags: ["AI", "Voice Generation"],
+    category: "free-stuff",
+    isNew: true
   }
 ]; 
