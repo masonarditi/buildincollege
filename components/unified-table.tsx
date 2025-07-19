@@ -5,6 +5,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { track } from "@vercel/analytics";
+import { EmailPopup } from "@/components/ui/email-popup";
 
 export interface TableItem {
   id: string;
@@ -59,11 +60,23 @@ const TableCell = React.forwardRef<HTMLTableCellElement, React.TdHTMLAttributes<
 TableCell.displayName = "TableCell";
 
 function UnifiedTable({ data, category }: UnifiedTableProps) {
+  const [emailPopup, setEmailPopup] = React.useState({
+    isOpen: false,
+    pendingItem: null as TableItem | null,
+    clickType: null as 'name' | 'button' | null,
+    isLoading: false,
+  });
+
   const getButtonText = (itemCategory: string) => {
     return itemCategory === 'fellowships' ? 'Apply Now' : 'Apply Now';
   };
 
-  const handleResourceClick = (item: TableItem, clickType: 'name' | 'button') => {
+  const handleResourceClick = (item: TableItem, clickType: 'name' | 'button', e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    // Check if user has already submitted email
+    const hasSubmittedEmail = localStorage.getItem('email_submitted') === 'true';
+    
     track('resource_click', {
       resource_id: item.id,
       resource_name: item.resource,
@@ -71,6 +84,65 @@ function UnifiedTable({ data, category }: UnifiedTableProps) {
       value: item.value,
       tags: item.tags.join(','),
       click_type: clickType,
+    });
+
+    if (hasSubmittedEmail) {
+      // User has already submitted email, redirect directly
+      window.open(item.href, '_blank');
+    } else {
+      // Show email popup
+      setEmailPopup({
+        isOpen: true,
+        pendingItem: item,
+        clickType,
+        isLoading: false,
+      });
+    }
+  };
+
+  const handleEmailSubmit = async (email: string) => {
+    if (!emailPopup.pendingItem) return;
+
+    setEmailPopup(prev => ({ ...prev, isLoading: true }));
+
+    try {
+      const response = await fetch('/api/emails', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          resourceId: emailPopup.pendingItem.id,
+          resourceName: emailPopup.pendingItem.resource,
+        }),
+      });
+
+      if (response.ok) {
+        // Mark that user has submitted email
+        localStorage.setItem('email_submitted', 'true');
+        
+        window.open(emailPopup.pendingItem.href, '_blank');
+        setEmailPopup({
+          isOpen: false,
+          pendingItem: null,
+          clickType: null,
+          isLoading: false,
+        });
+      } else {
+        console.error('Email submission failed');
+        setEmailPopup(prev => ({ ...prev, isLoading: false }));
+      }
+    } catch (error) {
+      console.error('Error submitting email:', error);
+      setEmailPopup(prev => ({ ...prev, isLoading: false }));
+    }
+  };
+
+  const handleClosePopup = () => {
+    setEmailPopup({
+      isOpen: false,
+      pendingItem: null,
+      clickType: null,
+      isLoading: false,
     });
   };
 
@@ -121,15 +193,12 @@ function UnifiedTable({ data, category }: UnifiedTableProps) {
                     height={item.resource === "Claude Credits" || item.resource === "Free Cursor Pro (1 Year)" ? 32 : 40}
                     alt={`${item.resource} logo`}
                   />
-                  <a 
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-medium hover:underline"
-                    onClick={() => handleResourceClick(item, 'name')}
+                  <button
+                    className="font-medium hover:underline text-left"
+                    onClick={(e) => handleResourceClick(item, 'name', e)}
                   >
                     {item.resource}
-                  </a>
+                  </button>
                 </div>
               </TableCell>
               <TableCell>{item.value}</TableCell>
@@ -152,15 +221,12 @@ function UnifiedTable({ data, category }: UnifiedTableProps) {
               </TableCell>
               <TableCell className="max-w-md">{item.description}</TableCell>
               <TableCell className="whitespace-nowrap">
-                <a
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
                   className="inline-flex items-center justify-center rounded-md px-4 py-1.5 text-xs font-medium bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 whitespace-nowrap"
-                  onClick={() => handleResourceClick(item, 'button')}
+                  onClick={(e) => handleResourceClick(item, 'button', e)}
                 >
                   {getButtonText(item.category)}
-                </a>
+                </button>
               </TableCell>
             </motion.tr>
           ))}
@@ -180,6 +246,14 @@ function UnifiedTable({ data, category }: UnifiedTableProps) {
           </a>
         </div>
       )}
+
+      <EmailPopup
+        isOpen={emailPopup.isOpen}
+        onClose={handleClosePopup}
+        onSubmit={handleEmailSubmit}
+        resourceName={emailPopup.pendingItem?.resource || ''}
+        isLoading={emailPopup.isLoading}
+      />
     </div>
   );
 }
