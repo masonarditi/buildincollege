@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { track } from "@vercel/analytics";
 import { EmailPopup } from "@/components/ui/email-popup";
+import { SharePopup } from "@/components/ui/share-popup";
 
 export interface TableItem {
   id: string;
@@ -67,6 +68,10 @@ function UnifiedTable({ data, category }: UnifiedTableProps) {
     isLoading: false,
   });
 
+  const [sharePopup, setSharePopup] = React.useState({
+    isOpen: false,
+  });
+
   const getButtonText = (itemCategory: string) => {
     return itemCategory === 'fellowships' ? 'Apply Now' : 'Apply Now';
   };
@@ -87,8 +92,11 @@ function UnifiedTable({ data, category }: UnifiedTableProps) {
     });
 
     if (hasSubmittedEmail) {
-      // User has already submitted email, redirect directly
+      // User has already submitted email, redirect directly and show share popup
       window.open(item.href, '_blank');
+      setTimeout(() => {
+        setSharePopup({ isOpen: true });
+      }, 1000); // Show share popup after 1 second
     } else {
       // Show email popup
       setEmailPopup({
@@ -127,6 +135,11 @@ function UnifiedTable({ data, category }: UnifiedTableProps) {
           clickType: null,
           isLoading: false,
         });
+
+        // Show share popup after email submission
+        setTimeout(() => {
+          setSharePopup({ isOpen: true });
+        }, 1000);
       } else {
         console.error('Email submission failed');
         setEmailPopup(prev => ({ ...prev, isLoading: false }));
@@ -144,6 +157,10 @@ function UnifiedTable({ data, category }: UnifiedTableProps) {
       clickType: null,
       isLoading: false,
     });
+  };
+
+  const handleCloseSharePopup = () => {
+    setSharePopup({ isOpen: false });
   };
 
   const footer = {
@@ -253,6 +270,11 @@ function UnifiedTable({ data, category }: UnifiedTableProps) {
         onSubmit={handleEmailSubmit}
         resourceName={emailPopup.pendingItem?.resource || ''}
         isLoading={emailPopup.isLoading}
+      />
+
+      <SharePopup
+        isOpen={sharePopup.isOpen}
+        onClose={handleCloseSharePopup}
       />
     </div>
   );
