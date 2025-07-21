@@ -6,6 +6,7 @@ import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { track } from "@vercel/analytics";
 
 interface SharePopupProps {
   isOpen: boolean;
@@ -19,6 +20,10 @@ export function SharePopup({ isOpen, onClose }: SharePopupProps) {
   };
 
   const handleShare = React.useCallback(async () => {
+    track('share_clicked', {
+      method: 'native_share',
+    });
+
     try {
       if (navigator.share) {
         await navigator.share({
@@ -38,6 +43,10 @@ export function SharePopup({ isOpen, onClose }: SharePopupProps) {
   }, [onClose, shareData]);
 
   const handleTwitterShare = React.useCallback(() => {
+    track('share_clicked', {
+      method: 'twitter',
+    });
+
     const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareData.text)}&url=${encodeURIComponent(window.location.origin)}`;
     window.open(twitterUrl, '_blank', 'width=550,height=420');
     onClose();
