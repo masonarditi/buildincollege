@@ -13,13 +13,14 @@ interface SharePopupProps {
 }
 
 export function SharePopup({ isOpen, onClose }: SharePopupProps) {
-  const handleShare = React.useCallback(async () => {
-    const shareData = {
-      title: 'BuildInCollege - Free Resources for College Builders',
-      text: 'found this list of free stuff for college founders - free cursor pro, openai credits, etc. check it out!',
-      url: window.location.origin,
-    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const shareData = {
+    title: 'BuildInCollege - Free Resources for College Builders',
+    text: 'found this list of free stuff for college founders - free cursor pro, openai credits, etc. check it out!',
+    url: window.location.origin,
+  };
 
+  const handleShare = React.useCallback(async () => {
     try {
       if (navigator.share) {
         await navigator.share(shareData);
@@ -29,10 +30,17 @@ export function SharePopup({ isOpen, onClose }: SharePopupProps) {
         alert('Link copied to clipboard!');
       }
     } catch (error) {
-      // Optionally handle error (e.g., show a toast)
+      // Silently handle any share errors (including cancellation)
     }
+    
     onClose();
-  }, [onClose]);
+  }, [onClose, shareData]);
+
+  const handleTwitterShare = React.useCallback(() => {
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareData.text)}&url=${encodeURIComponent(shareData.url)}`;
+    window.open(twitterUrl, '_blank', 'width=550,height=420');
+    onClose();
+  }, [onClose, shareData]);
 
   const handleClose = React.useCallback(() => {
     onClose();
@@ -96,18 +104,26 @@ export function SharePopup({ isOpen, onClose }: SharePopupProps) {
               <div className="space-y-2">
                 <h2 className="text-lg font-semibold">Enjoying BuildInCollege?</h2>
                 <p className="text-sm text-muted-foreground">
-                  Share it with a friend
+                  Share it with a friend, and help us grow this free resource :)
                 </p>
               </div>
 
-              <Button onClick={handleShare} className="w-full">
-                <Share2 className="w-4 h-4 mr-2" />
-                Share
-              </Button>
+              <div className="flex gap-2">
+                <Button onClick={handleShare} className="flex-1">
+                  <Share2 className="w-4 h-4 mr-2" />
+                  Share
+                </Button>
+                <Button onClick={handleTwitterShare} variant="outline" className="flex-1">
+                  <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                  
+                </Button>
+              </div>
             </div>
           </motion.div>
         </motion.div>
       )}
     </AnimatePresence>
   );
-} 
+}
