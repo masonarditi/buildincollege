@@ -65,12 +65,12 @@ export const freeStuffData = [
   },
   {
     id: "7",
-    resource: "Google Veo 3 AI Video Generator",
+    resource: "Google Colab (free compute)",
     logo: "/logos/google.jpeg",
-    value: "$240/year",
-    description: "Free via Google AI Pro for students through finals 2026",
-    href: "https://one.google.com/about/google-ai-plans/",
-    tags: ["AI", "Video Generation", "Productivity"],
+    value: "$120",
+    description: "free with student email",
+    href: "https://colab.research.google.com/signup",
+    tags: ["AI", "Compute", "Development"],
     category: "free-stuff"
   },
   {
