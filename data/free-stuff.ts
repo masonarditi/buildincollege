@@ -207,5 +207,16 @@ export const freeStuffData = [
     category: "free-stuff",
     isNew: true
   },
+  {
+    id: "21",
+    resource: "Adobe Creative Cloud (Student)",
+    logo: "/logos/adobe-creative-cloud.png",
+    value: "60% off",
+    description: "Get 20+ Adobe apps including Photoshop, Illustrator, Premiere Pro with 60% student discount",
+    href: "https://www.adobe.com/creativecloud/buy/students.html",
+    tags: ["Design", "Student Discount", "Professional"],
+    category: "free-stuff",
+    isNew: true
+  },
 
 ]; 

@@ -56,7 +56,7 @@
 - GitHub student pack vs Microsoft student benefits
 - best free development tools computer science majors
 - free cloud hosting credits college students
-- student discount programming software 2024
+- student discount programming software 2025
 
 ### Problem-Solving Keywords
 - how to get free developer tools as student
@@ -75,7 +75,7 @@
 ### Educational Intent
 - learn programming free tools students
 - college computer science free resources
-- student developer setup guide 2024
+- student developer setup guide 2025
 - free coding tools university students
 - programming student starter pack free
 
@@ -94,7 +94,7 @@
 - how to access GitHub student pack benefits
 
 ## Seasonal/Trending Keywords
-- back to school developer tools 2024
+- back to school developer tools 2025
 - college freshman programming setup
 - student hackathon free resources
 - new semester coding tools free
@@ -113,7 +113,7 @@
 ## Content Marketing Keywords
 ### Blog Post Ideas
 - "complete guide free developer tools college students"
-- "student discount roundup programming tools 2024"
+- "student discount roundup programming tools 2025"
 - "GitHub student pack alternatives comparison"
 - "free AI tools every computer science student needs"
 - "setting up development environment free students"
