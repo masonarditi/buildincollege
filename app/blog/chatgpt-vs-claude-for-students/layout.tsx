@@ -8,9 +8,9 @@ export const metadata: Metadata = {
     title: "ChatGPT vs Claude for Students - Complete 2025 Comparison",
     description: "Which AI assistant is best for student developers? Compare features, pricing, and capabilities.",
     type: "article",
+    publishedTime: "2025-01-25T00:00:00.000Z",
   },
   authors: [{ name: "Build in College" }],
-  publishedTime: "2025-01-25T00:00:00.000Z",
 };
 
 export default function ChatGPTVsClaudeLayout({
