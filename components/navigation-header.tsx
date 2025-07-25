@@ -22,12 +22,20 @@ export function NavigationHeader() {
           <span className="font-semibold text-base">Build in College</span>
         </Link>
         
-        <Link 
-          href="/about"
-          className="px-3 py-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-        >
-          About
-        </Link>
+        <div className="flex items-center gap-1">
+          <Link 
+            href="/blog"
+            className="px-3 py-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Blog
+          </Link>
+          <Link 
+            href="/about"
+            className="px-3 py-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            About
+          </Link>
+        </div>
       </nav>
     </motion.header>
   );
