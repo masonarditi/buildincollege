@@ -8,9 +8,9 @@ export const metadata: Metadata = {
     title: "Complete Student Developer Setup Guide 2025",
     description: "Build a professional development environment with free tools and student discounts",
     type: "article",
+    publishedTime: "2025-01-25T00:00:00.000Z",
   },
   authors: [{ name: "Build in College" }],
-  publishedTime: "2025-01-25T00:00:00.000Z",
 };
 
 export default function StudentDeveloperSetupGuideLayout({
