@@ -10,6 +10,26 @@ export default function Blog() {
 
   const blogPosts = [
     {
+      id: "student-developer-setup-guide-2025",
+      title: "The Complete Student Developer Setup Guide 2025",
+      excerpt: "Everything you need to build a professional development environment as a student. From free tools to premium software with student discounts.",
+      date: "January 25, 2025",
+      readTime: "15 min read",
+      author: "Build in College",
+      tags: ["Setup Guide", "Developer Tools", "Student Resources"],
+      slug: "student-developer-setup-guide-2025"
+    },
+    {
+      id: "chatgpt-vs-claude-for-students",
+      title: "ChatGPT vs Claude for Students",
+      excerpt: "Complete comparison of ChatGPT Plus vs Claude for student developers. Pricing, features, coding capabilities, and which AI assistant fits your academic needs.",
+      date: "January 25, 2025",
+      readTime: "12 min read",
+      author: "Build in College",
+      tags: ["AI Comparison", "ChatGPT", "Claude"],
+      slug: "chatgpt-vs-claude-for-students"
+    },
+    {
       id: "intro-to-vibe-coding-for-students",
       title: "Intro to Vibe Coding for Students",
       excerpt: "Transform your coding experience with aesthetic tools, AI assistants, and beautiful development environments that make programming actually enjoyable.",
