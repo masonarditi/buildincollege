@@ -8,9 +8,9 @@ export const metadata: Metadata = {
     title: "Intro to Vibe Coding for Students - Transform Your Programming Experience",
     description: "Complete guide to creating beautiful, AI-powered development environments for students",
     type: "article",
+    publishedTime: "2025-01-25T00:00:00.000Z",
   },
   authors: [{ name: "Build in College" }],
-  publishedTime: "2025-01-25T00:00:00.000Z",
 };
 
 export default function IntroToVibeCodingLayout({
