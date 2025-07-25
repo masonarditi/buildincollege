@@ -163,7 +163,7 @@ export default function FreeDesignToolsStudents() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          {categories.map((category, index) => (
+          {categories.map((category) => (
             <div key={category.title} className="p-6 border border-border rounded-xl">
               <div className="flex items-center gap-3 mb-4">
                 <category.icon className="w-8 h-8 text-spektr-cyan-50" />
@@ -190,7 +190,7 @@ export default function FreeDesignToolsStudents() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-center mb-8">🎯 Project Ideas to Get Started</h2>
             <div className="grid md:grid-cols-3 gap-6">
-              {designProjects.map((project, index) => (
+              {designProjects.map((project) => (
                 <div key={project.title} className="bg-white/50 dark:bg-gray-800/50 rounded-lg p-6">
                   <h3 className="font-semibold mb-3">{project.title}</h3>
                   <p className="text-sm text-muted-foreground mb-4">{project.description}</p>

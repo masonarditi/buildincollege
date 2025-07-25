@@ -145,7 +145,7 @@ export default function FreeCodingToolsStudents() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          {categories.map((category, index) => (
+          {categories.map((category) => (
             <div key={category.title} className="p-6 border border-border rounded-xl">
               <div className="flex items-center gap-3 mb-4">
                 <category.icon className="w-8 h-8 text-spektr-cyan-50" />

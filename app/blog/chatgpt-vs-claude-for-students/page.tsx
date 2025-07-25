@@ -68,7 +68,7 @@ export default function ChatGPTVsClaude() {
                   />
                   <h3 className="text-xl font-bold mb-2">ChatGPT Plus</h3>
                   <p className="text-sm text-muted-foreground mb-2">2 months free for students</p>
-                  <p className="text-xs text-muted-foreground">OpenAI's flagship AI assistant</p>
+                  <p className="text-xs text-muted-foreground">OpenAI&apos;s flagship AI assistant</p>
                 </div>
                 
                 <div className="text-center">
@@ -79,14 +79,14 @@ export default function ChatGPTVsClaude() {
                   />
                   <h3 className="text-xl font-bold mb-2">Claude</h3>
                   <p className="text-sm text-muted-foreground mb-2">API credits for builders</p>
-                  <p className="text-xs text-muted-foreground">Anthropic's safety-focused AI</p>
+                  <p className="text-xs text-muted-foreground">Anthropic&apos;s safety-focused AI</p>
                 </div>
               </div>
 
               <section>
                 <h2 className="text-2xl font-bold mb-4">The Student AI Dilemma</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  As a student in 2025, you're spoiled for choice when it comes to AI assistants. Both ChatGPT Plus and Claude offer powerful capabilities for coding, research, and learning. But with limited budgets and specific academic needs, choosing the right AI companion can make or break your productivity.
+                  As a student in 2025, you&apos;re spoiled for choice when it comes to AI assistants. Both ChatGPT Plus and Claude offer powerful capabilities for coding, research, and learning. But with limited budgets and specific academic needs, choosing the right AI companion can make or break your productivity.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   This comprehensive comparison breaks down everything you need to know to make the best choice for your student journey, from pricing and features to real-world performance in coding and academic tasks.
@@ -151,7 +151,7 @@ export default function ChatGPTVsClaude() {
                 <div className="bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6">
                   <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-100">💡 Student Tip</h4>
                   <p className="text-sm text-blue-800 dark:text-blue-200">
-                    If you're in the US or Canada, ChatGPT Plus's 2-month free trial is unbeatable. International students should start with Claude's free tier and consider API credits for projects.
+                    If you&apos;re in the US or Canada, ChatGPT Plus&apos;s 2-month free trial is unbeatable. International students should start with Claude&apos;s free tier and consider API credits for projects.
                   </p>
                 </div>
               </section>
@@ -260,7 +260,7 @@ export default function ChatGPTVsClaude() {
                   <strong>ChatGPT Plus</strong> offers real-time web browsing and the ability to search current information, making it excellent for research papers and staying current with technology trends. Its integration with various plugins and tools makes it a versatile research companion.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  <strong>Claude</strong> focuses on helping you work with information you already have. It excels at analyzing documents, summarizing research papers, and helping you structure complex arguments. While it can't browse the web, it's exceptional at deep analysis.
+                  <strong>Claude</strong> focuses on helping you work with information you already have. It excels at analyzing documents, summarizing research papers, and helping you structure complex arguments. While it can&apos;t browse the web, it&apos;s exceptional at deep analysis.
                 </p>
                 
                 <h3 className="text-xl font-semibold mb-3">Writing Assistance</h3>
@@ -304,7 +304,7 @@ export default function ChatGPTVsClaude() {
                   <div className="p-6 bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-800 rounded-xl">
                     <h3 className="text-lg font-semibold mb-3 text-green-900 dark:text-green-100">Choose ChatGPT Plus If:</h3>
                     <ul className="space-y-2 text-sm text-green-800 dark:text-green-200">
-                      <li>• You're in the US/Canada (free trial!)</li>
+                      <li>• You&apos;re in the US/Canada (free trial!)</li>
                       <li>• You need real-time web research</li>
                       <li>• You want mobile access</li>
                       <li>• You prefer quick, direct answers</li>
@@ -315,11 +315,11 @@ export default function ChatGPTVsClaude() {
                   <div className="p-6 bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800 rounded-xl">
                     <h3 className="text-lg font-semibold mb-3 text-blue-900 dark:text-blue-100">Choose Claude If:</h3>
                     <ul className="space-y-2 text-sm text-blue-800 dark:text-blue-200">
-                      <li>• You're an international student</li>
+                      <li>• You&apos;re an international student</li>
                       <li>• You need detailed code explanations</li>
                       <li>• You work with complex documents</li>
                       <li>• You prefer thoughtful, nuanced responses</li>
-                      <li>• You're building projects (API access)</li>
+                      <li>• You&apos;re building projects (API access)</li>
                     </ul>
                   </div>
                 </div>
@@ -327,7 +327,7 @@ export default function ChatGPTVsClaude() {
                 <div className="bg-spektr-cyan-50/10 border border-spektr-cyan-50/20 rounded-lg p-6">
                   <h3 className="text-lg font-semibold mb-3 text-spektr-cyan-50">💡 Pro Student Strategy</h3>
                   <p className="text-muted-foreground mb-4">
-                    Many successful student developers use both: ChatGPT Plus for quick daily tasks and research, and Claude's free tier for detailed code reviews and complex problem-solving. You don't have to choose just one!
+                    Many successful student developers use both: ChatGPT Plus for quick daily tasks and research, and Claude&apos;s free tier for detailed code reviews and complex problem-solving. You don&apos;t have to choose just one!
                   </p>
                   <div className="flex gap-4">
                     <Button 

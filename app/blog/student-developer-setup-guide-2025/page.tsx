@@ -109,7 +109,7 @@ export default function StudentDeveloperSetupGuide() {
               <section>
                 <h2 className="text-2xl font-bold mb-4">Why Your Setup Matters</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Your development environment is more than just tools—it's your creative workspace. A well-configured setup can mean the difference between frustrating late-night debugging sessions and smooth, productive coding flows that help you learn faster and build better projects.
+                  Your development environment is more than just tools—it&apos;s your creative workspace. A well-configured setup can mean the difference between frustrating late-night debugging sessions and smooth, productive coding flows that help you learn faster and build better projects.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   As a student, you have access to incredible tools that would normally cost thousands of dollars. This guide shows you how to claim them all and configure them into a professional development environment that rivals what senior developers use at top tech companies.
@@ -359,7 +359,7 @@ export default function StudentDeveloperSetupGuide() {
                       <div>
                         <h4 className="font-medium mb-2">Daily Workflow:</h4>
                         <ol className="text-sm space-y-1 text-muted-foreground list-decimal list-inside">
-                          <li>Open Cursor Pro with yesterday's project</li>
+                          <li>Open Cursor Pro with yesterday&apos;s project</li>
                           <li>Review GitHub notifications and issues</li>
                           <li>Use ChatGPT Plus for debugging help</li>
                           <li>Deploy to Heroku for testing</li>
@@ -408,7 +408,7 @@ export default function StudentDeveloperSetupGuide() {
               <section>
                 <h2 className="text-2xl font-bold mb-4">Maintenance & Updates</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Your development environment is never "done"—it evolves with your skills and projects. Here's how to keep everything running smoothly:
+                  Your development environment is never &quot;done&quot;—it evolves with your skills and projects. Here&apos;s how to keep everything running smoothly:
                 </p>
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-6">

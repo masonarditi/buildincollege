@@ -141,7 +141,7 @@ export default function GitHubStudentPack() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          {categories.map((category, index) => (
+          {categories.map((category) => (
             <div key={category.title} className="text-center p-6">
               <category.icon className="w-10 h-10 mx-auto mb-4 text-spektr-cyan-50" />
               <h3 className="text-lg font-semibold mb-2">{category.title}</h3>

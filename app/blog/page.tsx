@@ -147,7 +147,7 @@ export default function Blog() {
             <div className="bg-muted/50 rounded-xl p-8 max-w-2xl mx-auto">
               <h2 className="text-2xl font-semibold mb-4">More Content Coming Soon</h2>
               <p className="text-muted-foreground mb-6">
-                We're working on comprehensive guides, tool comparisons, and step-by-step tutorials for student developers.
+                We&apos;re working on comprehensive guides, tool comparisons, and step-by-step tutorials for student developers.
               </p>
               <Button 
                 size="lg" 

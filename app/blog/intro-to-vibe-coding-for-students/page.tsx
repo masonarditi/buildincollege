@@ -61,7 +61,7 @@ export default function IntroToVibeCoding() {
               <section>
                 <h2 className="text-2xl font-bold mb-4">What is Vibe Coding?</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Vibe coding isn't just about writing code—it's about creating an environment where programming feels inspiring, enjoyable, and sustainable. It's the difference between grinding through assignments in a plain text editor and coding in a beautiful, AI-powered environment that actually makes you excited to build.
+                  Vibe coding isn&apos;t just about writing code—it&apos;s about creating an environment where programming feels inspiring, enjoyable, and sustainable. It&apos;s the difference between grinding through assignments in a plain text editor and coding in a beautiful, AI-powered environment that actually makes you excited to build.
                 </p>
                 
                 {/* Tool Preview Images */}
@@ -108,7 +108,7 @@ export default function IntroToVibeCoding() {
                 </div>
                 
                 <p className="text-muted-foreground leading-relaxed">
-                  For students especially, vibe coding can transform your relationship with programming from a necessary chore into a creative outlet. When your tools are beautiful, intelligent, and fun to use, you're more likely to experiment, learn, and push through challenging concepts.
+                  For students especially, vibe coding can transform your relationship with programming from a necessary chore into a creative outlet. When your tools are beautiful, intelligent, and fun to use, you&apos;re more likely to experiment, learn, and push through challenging concepts.
                 </p>
               </section>
 
@@ -117,12 +117,12 @@ export default function IntroToVibeCoding() {
                 
                 <h3 className="text-xl font-semibold mb-3 text-spektr-cyan-50">1. Aesthetic Development Environment</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Your code editor is where you'll spend hundreds of hours. Tools like <strong>Cursor Pro</strong> offer beautiful interfaces with smooth animations, customizable themes, and clean typography that make coding feel less like work and more like art.
+                  Your code editor is where you&apos;ll spend hundreds of hours. Tools like <strong>Cursor Pro</strong> offer beautiful interfaces with smooth animations, customizable themes, and clean typography that make coding feel less like work and more like art.
                 </p>
                 
                 <h3 className="text-xl font-semibold mb-3 text-spektr-cyan-50">2. AI-Powered Assistance</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Modern vibe coding leverages AI to reduce friction and boost creativity. <strong>GitHub Copilot</strong> suggests code as you type, while <strong>ChatGPT Plus</strong> helps you brainstorm, debug, and learn new concepts. These aren't just productivity tools—they're creative partners that help you focus on problem-solving rather than syntax.
+                  Modern vibe coding leverages AI to reduce friction and boost creativity. <strong>GitHub Copilot</strong> suggests code as you type, while <strong>ChatGPT Plus</strong> helps you brainstorm, debug, and learn new concepts. These aren&apos;t just productivity tools—they&apos;re creative partners that help you focus on problem-solving rather than syntax.
                 </p>
                 
                 <h3 className="text-xl font-semibold mb-3 text-spektr-cyan-50">3. Seamless Workflow Integration</h3>
@@ -135,7 +135,7 @@ export default function IntroToVibeCoding() {
                 <h2 className="text-2xl font-bold mb-4">Essential Vibe Coding Tools for Students</h2>
                 
                 <div className="bg-muted/50 rounded-lg p-6 mb-6">
-                  <h3 className="text-lg font-semibold mb-3">Free Options That Don't Compromise</h3>
+                  <h3 className="text-lg font-semibold mb-3">Free Options That Don&apos;t Compromise</h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li><strong>VS Code with Extensions:</strong> Completely free with thousands of themes and extensions</li>
                     <li><strong>GitHub Codespaces:</strong> 60 hours/month free cloud development environment</li>
@@ -224,7 +224,7 @@ export default function IntroToVibeCoding() {
               <section>
                 <h2 className="text-2xl font-bold mb-4">The Psychology of Vibe Coding</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Beautiful, well-designed tools aren't just about aesthetics—they have real psychological benefits. When your coding environment feels polished and professional, you're more likely to:
+                  Beautiful, well-designed tools aren&apos;t just about aesthetics—they have real psychological benefits. When your coding environment feels polished and professional, you&apos;re more likely to:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-4">
                   <li>Spend more time coding and less time procrastinating</li>
@@ -243,33 +243,33 @@ export default function IntroToVibeCoding() {
                 
                 <h3 className="text-xl font-semibold mb-3">Over-Customization</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  It's easy to spend hours tweaking themes and extensions instead of actually coding. Find a setup you love, then stick with it long enough to be productive.
+                  It&apos;s easy to spend hours tweaking themes and extensions instead of actually coding. Find a setup you love, then stick with it long enough to be productive.
                 </p>
                 
                 <h3 className="text-xl font-semibold mb-3">Tool Overload</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Don't try to use every new tool at once. Start with 2-3 core tools and master them before adding more to your workflow.
+                  Don&apos;t try to use every new tool at once. Start with 2-3 core tools and master them before adding more to your workflow.
                 </p>
                 
                 <h3 className="text-xl font-semibold mb-3">Ignoring the Fundamentals</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Beautiful tools won't replace understanding algorithms, data structures, and core programming concepts. Use vibe coding to make learning these fundamentals more enjoyable, not to avoid them.
+                  Beautiful tools won&apos;t replace understanding algorithms, data structures, and core programming concepts. Use vibe coding to make learning these fundamentals more enjoyable, not to avoid them.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-bold mb-4">Getting Started Today</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  The best time to start vibe coding is right now. You don't need to overhaul your entire setup—just make one small improvement that brings you joy. Maybe it's installing a beautiful theme, trying GitHub Copilot, or setting up a cleaner workspace.
+                  The best time to start vibe coding is right now. You don&apos;t need to overhaul your entire setup—just make one small improvement that brings you joy. Maybe it&apos;s installing a beautiful theme, trying GitHub Copilot, or setting up a cleaner workspace.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Remember, vibe coding is deeply personal. What works for one developer might not work for another. Experiment, find what makes you excited to code, and don't be afraid to evolve your setup as you grow as a programmer.
+                  Remember, vibe coding is deeply personal. What works for one developer might not work for another. Experiment, find what makes you excited to code, and don&apos;t be afraid to evolve your setup as you grow as a programmer.
                 </p>
                 
                 <div className="bg-spektr-cyan-50/10 border border-spektr-cyan-50/20 rounded-lg p-6">
                   <h3 className="text-lg font-semibold mb-3 text-spektr-cyan-50">Ready to Transform Your Coding Experience?</h3>
                   <p className="text-muted-foreground mb-4">
-                    Check out our curated collection of vibe coding tools specifically chosen for students. From free options to premium tools with student discounts, we've got everything you need to make coding enjoyable.
+                    Check out our curated collection of vibe coding tools specifically chosen for students. From free options to premium tools with student discounts, we&apos;ve got everything you need to make coding enjoyable.
                   </p>
                   <Button 
                     className="gap-2"
