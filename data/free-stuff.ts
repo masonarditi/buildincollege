@@ -201,14 +201,36 @@ export const freeStuffData = [
     resource: "ElevenLabs",
     logo: "/logos/elevenlabs.png",
     value: "$55",
-    description: "3 months free with Github Student Dev Pack",
-    href: "https://www.aiengineerpack.com/",
+    description: "via ElevenLabs AI Student Pack",
+    href: "https://aistudentpack.com/",
     tags: ["AI", "Voice Generation"],
     category: "free-stuff",
     isNew: true
   },
   {
     id: "21",
+    resource: "v0",
+    logo: "/logos/vercel.png",
+    value: "$60",
+    description: "via ElevenLabs AI Student Pack",
+    href: "https://aistudentpack.com/",
+    tags: ["AI", "Code Generation", "Web Development"],
+    category: "free-stuff",
+    isNew: true
+  },
+  {
+    id: "22",
+    resource: "Lovable",
+    logo: "/logos/lovable.png",
+    value: "$150",
+    description: "50% off Pro plan for a year - via ElevenLabs AI Student Pack",
+    href: "https://aistudentpack.com/",
+    tags: ["AI", "Code Generation", "Web Development"],
+    category: "free-stuff",
+    isNew: true
+  },
+  {
+    id: "23",
     resource: "Adobe Creative Cloud (Student)",
     logo: "/logos/adobe-creative-cloud.png",
     value: "60% off",
