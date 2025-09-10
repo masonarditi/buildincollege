@@ -34,6 +34,17 @@ export const freeStuffData = [
   },
   {
     id: "4",
+    resource: "Google Gemini Pro (Free for Students)",
+    logo: "/logos/google.jpeg",
+    value: "$240",
+    description: "Free for 1 year - unlimited chats, image uploads, Deep Research, 2TB storage, and Gemini Live",
+    href: "https://gemini.google/students/",
+    tags: ["AI", "Free for Students", "Research"],
+    category: "free-stuff",
+    isNew: true
+  },
+  {
+    id: "5",
     resource: "ChatGPT Plus (2 Months Free)",
     logo: "/logos/openai.webp",
     value: "$40",
@@ -44,7 +55,7 @@ export const freeStuffData = [
     isNew: true
   },
   {
-    id: "5",
+    id: "6",
     resource: "Firecrawl",
     logo: "/logos/firecrawl.jpg",
     value: "$100+",
@@ -55,7 +66,7 @@ export const freeStuffData = [
     isNew: true
   },
   {
-    id: "6",
+    id: "7",
     resource: "Free Framer Pro",
     logo: "/logos/framer.svg",
     value: "$180",
@@ -66,7 +77,7 @@ export const freeStuffData = [
     isNew: true
   },
   {
-    id: "7",
+    id: "8",
     resource: "Claude Credits",
     logo: "/logos/anthropic-small.png",
     value: "$50",
@@ -77,7 +88,7 @@ export const freeStuffData = [
   },
 
   {
-    id: "8",
+    id: "9",
     resource: "Free Landing Page Builder",
     logo: "/logos/rocketship-icon.png",
     value: "",
@@ -88,7 +99,7 @@ export const freeStuffData = [
     isNew: true
   },
   {
-    id: "9",
+    id: "10",
     resource: "OpenAI Credits",
     logo: "/logos/openai.webp",
     value: "$1000",
@@ -98,7 +109,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "10",
+    id: "11",
     resource: "Free Cursor Pro (1 Year)",
     logo: "/logos/cursor.jpeg",
     value: "$240",
@@ -108,7 +119,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "11",
+    id: "12",
     resource: "Google Colab (free compute)",
     logo: "/logos/google.jpeg",
     value: "$120",
@@ -118,7 +129,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "12",
+    id: "13",
     resource: "Screen Studio",
     logo: "/logos/screenstudio.jpeg",
     value: "$100+",
@@ -128,7 +139,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "13",
+    id: "14",
     resource: "Free Notion Plus w/ AI",
     logo: "/logos/notion.png",
     value: "",
@@ -138,7 +149,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "14",
+    id: "15",
     resource: "Free Figma Pro",
     logo: "/logos/figma.avif",
     value: "$144/year",
@@ -148,7 +159,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "15",
+    id: "16",
     resource: "Free Domains (Name.com)",
     logo: "/logos/name.webp",
     value: "",
@@ -158,7 +169,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "16",
+    id: "17",
     resource: "Free Domain (Namecheap)",
     logo: "/logos/namecheap.svg",
     value: "",
@@ -169,7 +180,7 @@ export const freeStuffData = [
     isNew: true
   },
   {
-    id: "17",
+    id: "18",
     resource: "Free Heroku Hosting (2 Years)",
     logo: "/logos/heroku.webp",
     value: "$312",
@@ -179,7 +190,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "18",
+    id: "19",
     resource: "Free Perplexity Pro (1 Month)",
     logo: "/logos/perplexity.png",
     value: "$20",
@@ -189,7 +200,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "19",
+    id: "20",
     resource: "Microsoft for Startups",
     logo: "/logos/microsoft.webp",
     value: "",
@@ -199,7 +210,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-      id: "20",
+      id: "21",
     resource: "Github Student Developer Pack",
     logo: "/logos/github.png",
     value: "",
@@ -209,7 +220,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "21",
+    id: "22",
     resource: "Free GPU Credits",
     logo: "/logos/digitalocean.png",
     value: "$10,000",
@@ -219,7 +230,7 @@ export const freeStuffData = [
     category: "free-stuff"
   },
   {
-    id: "22",
+    id: "23",
     resource: "Amazon AWS Credits",
     logo: "/logos/amazon-aws.png",
     value: "$10k+",
@@ -230,7 +241,7 @@ export const freeStuffData = [
     isNew: true
   },
   {
-    id: "23",
+    id: "24",
     resource: "Adobe Creative Cloud (Student)",
     logo: "/logos/adobe-creative-cloud.png",
     value: "60% off",
